@@ -104,10 +104,6 @@ document
     
 
     else {
-      document.getElementById("alert1").classList.remove("hidden");
-      setTimeout(() => {
-        document.getElementById("alert1").classList.add("hidden");
-      }, 3000);
       // Get form data
       var id = document.getElementById("exampleInputEmail1").value;
       var password = document.getElementById("exampleInputPassword1").value;
@@ -132,15 +128,27 @@ document
           if (response.ok) {
             return response.text(); // Parse response body as text
           } else {
+            document.getElementById("alert3").classList.remove("hidden");
+          setTimeout(() => {
+            document.getElementById("alert3").classList.add("hidden");
+          }, 3000);
             throw new Error("Error: " + response.status);
           }
         })
         .then(function (data) {
           // Handle the server response
+            document.getElementById("alert1").classList.remove("hidden");
+            setTimeout(() => {
+              document.getElementById("alert1").classList.add("hidden");
+            }, 3000);
           console.log(data);
         })
         .catch(function (error) {
           // Handle network errors or other exceptions
+          document.getElementById("alert3").classList.remove("hidden");
+          setTimeout(() => {
+            document.getElementById("alert3").classList.add("hidden");
+          }, 3000);
           console.error(error);
         });
     }
@@ -249,9 +257,12 @@ document
     })
       .then(function (response) {
         if (response.ok) {
-          
           return response.text(); // Parse response body as text
         } else {
+          document.getElementById("alert3").classList.remove("hidden");
+          setTimeout(() => {
+            document.getElementById("alert3").classList.add("hidden");
+          }, 3000);
           throw new Error("Error: " + response.status);
         }
       })
@@ -265,6 +276,10 @@ document
       })
       .catch(function (error) {
         // Handle network errors or other exceptions
+        document.getElementById("alert3").classList.remove("hidden");
+          setTimeout(() => {
+            document.getElementById("alert3").classList.add("hidden");
+          }, 3000);
         console.error(error);
       });
     }

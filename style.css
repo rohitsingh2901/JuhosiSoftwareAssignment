@@ -1,3 +1,6 @@
+/* body{
+    overflow: hidden;
+} */
 .box{
     width: 100vw;
     height: 100vh;
@@ -12,13 +15,36 @@
 }
 
 .card{
-    width: 30rem;
+    width: 40rem;
     border-radius: 15px;
     background-color: rgb(41, 39, 39);
 }
 .custom-color{
+    color: white;
     background-color: rgb(41, 39, 39);
 }
 .custom-color:focus{
+    color: white;
+    background-color: rgb(41, 39, 39);
+}
+.hidden {
+    display: none;
+}
+.alert{
+    margin: 0px ;
+}
+#orderdate{
+    color: white;
+    background-color: rgb(41, 39, 39);
+}
+#orderdate:focus{
+    color: white;
+    background-color: rgb(41, 39, 39);
+}
+.form2{
+    display: flex;
+    justify-content: space-around;
+}
+.table{
     background-color: rgb(41, 39, 39);
 }

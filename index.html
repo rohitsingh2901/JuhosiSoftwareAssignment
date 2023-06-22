@@ -13,16 +13,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="alert1" class="alert alert-sucess alert-dismissible fade show hidden" role="alert">
+      <strong>Success!</strong> Your credentials are saved into the database
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div id="alert2" class="alert alert-sucess alert-dismissible fade show hidden" role="alert">
+      <strong>Success!</strong> Fill the above form
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
     <div class="box">
       <div class="innerBox">
         <div class="card">
           <div class="card-body">
-            <form>
+            <form id="customer1Form">
               <div class="form-group text-white">
-                <label for="exampleInputEmail1">Email address</label>
-                <input
-                  type="email"
-                  name="email"
+                <label for="exampleInputEmail1">ID</label>
+                <input required
+                  type="text"
+                  name="id"
                   class="form-control custom-color"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
@@ -30,15 +42,194 @@
               </div>
               <div class="form-group text-white">
                 <label  for="exampleInputPassword1">Password</label>
-                <input
+                <input required
                   type="password"
                   name="password"
                   class="form-control custom-color"
                   id="exampleInputPassword1"
                 />
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">Sign in</button>
             </form>
+
+
+
+
+
+
+            <form id="customer2Form" class="hidden">
+              <div class="form2">
+              <div class="col-6">
+              <div class="form-group text-white">
+                <label for="orderdate">Order Date </label><br>
+                <input  required class="form-control custom-color" type="date" id="orderdate" name="orderdate"/>
+              </div>
+              <div class="form-group text-white">
+                <label  for="exampleInput1">Company</label>
+                <input required
+                  type="text"
+                  name="company"
+                  class="form-control custom-color"
+                  id="exampleInput1"
+                />
+                <div id="errorText" class="invalid-feedback">Please enter only alphanumeric characters.</div>
+              </div>
+              <div class="form-group text-white">
+                <label  for="exampleInput2">Owner</label>
+                <input required
+                  type="text"
+                  name="owner"
+                  class="form-control custom-color"
+                  id="exampleInput2"
+                />
+                <div id="errorText2" class="invalid-feedback">Please enter only alphanumeric characters.</div>
+              </div>
+              <div class="form-group text-white">
+                <label  for="exampleInput3">Item</label>
+                <input required
+                  type="text"
+                  name="item"
+                  class="form-control custom-color"
+                  id="exampleInput3"
+                />
+                <div id="errorText3" class="invalid-feedback">Please enter only alphanumeric characters.</div>
+              </div>
+              <div class="form-group text-white">
+                <label  for="exampleInput4">Quantity</label>
+                <input required
+                  type="text"
+                  name="quantity"
+                  class="form-control custom-color"
+                  id="exampleInput4"
+                />
+                <div id="errorText4" class="invalid-feedback">Please enter only integer.</div>
+              </div>
+              <div class="form-group text-white">
+                <label  for="exampleInput5">Weight</label>
+                <input required
+                  type="text"
+                  name="weight"
+                  class="form-control custom-color"
+                  id="exampleInput5"
+                />
+                <div id="errorText5" class="invalid-feedback">Please enter only float.</div>
+              </div>
+              <div class="form-group text-white">
+                <label  for="exampleInput6">Request for shipment</label>
+                <input required
+                  type="text"
+                  name="shipment"
+                  class="form-control custom-color"
+                  id="exampleInput6"
+                />
+                <div id="errorText6" class="invalid-feedback">Please enter only integer.</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group text-white">
+                <label  for="exampleInput7">Tracking ID</label>
+                <input required
+                  type="text"
+                  name="track"
+                  class="form-control custom-color"
+                  id="exampleInput7"
+                />
+                <div id="errorText7" class="invalid-feedback">Please enter only integer.</div>
+              </div>
+              <div class="form-group text-white">
+                <label  for="exampleInput8">Shipment Size</label>
+                <input required
+                  type="text"
+                  name="size"
+                  class="form-control custom-color"
+                  id="exampleInput8"
+                />
+                <div id="errorText8" class="invalid-feedback">Please enter only integer.</div>
+              </div>
+              <div class="form-group text-white">
+                <label  for="exampleInput9">Box Count</label>
+                <input required
+                  type="text"
+                  name="size"
+                  class="form-control custom-color"
+                  id="exampleInput9"
+                />
+                <div id="errorText9" class="invalid-feedback">Please enter only integer.</div>
+              </div>
+              <div class="form-group text-white">
+                <label  for="exampleInput10">Specification</label>
+                <input required
+                  type="text"
+                  name="specification"
+                  class="form-control custom-color"
+                  id="exampleInput10"
+                />
+                <div id="errorText10" class="invalid-feedback">Please enter only integer.</div>
+              </div>
+              <div class="form-group text-white">
+                <label  for="exampleInput11">Checklist Quantity</label>
+                <input required
+                  type="text"
+                  name="checklist"
+                  class="form-control custom-color"
+                  id="exampleInput11"
+                />
+                <div id="errorText11" class="invalid-feedback">Please enter only integer.</div>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button onclick="goToHomePage(event)" class="btn btn-primary">Home</button>
+            </div>
+          </div>
+            </form>
+
+
+
+
+
+            <div id="table" class="hidden">
+            <table  class="table table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">Item/Customer</th>
+                  <th scope="col">Customer 1</th>
+                  <th scope="col">Customer 2</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Quantity</th>
+                  <td id="q1sum">0</td>
+                  <td id="q2sum">0</td>
+                  <td id="tqsum">0</td>
+                </tr>
+                <tr>
+                  <th scope="row">Weight</th>
+                  <td id="q1weight">0</td>
+                  <td id="q2weight">0</td>
+                  <td id="twsum">0</td>
+                </tr>
+                <tr>
+                  <th scope="row">Box Count</th>
+                  <td id="q1box">0</td>
+                  <td id="q2box">0</td>
+                  <td id="tbsum">0</td>
+                </tr>
+              </tbody>
+            </table>
+            <button onclick="window.location.href = '/';" class="btn btn-primary">Home</button> 
+          </div>
+
+
+
+
+
+
+
+
+
+
+
           </div>
         </div>
       </div>
@@ -54,4 +245,5 @@
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
     crossorigin="anonymous"
   ></script>
+  <script src="index.js"></script>
 </html>

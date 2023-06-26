@@ -289,5 +289,5 @@ document
   function goToHomePage(event) {
     event.preventDefault(); // Prevents the default form submission
 
-    window.location = "/"; // Replace with your home page URL
+    window.location = "/JuhosiSoftwareAssignment"; // Replace with your home page URL
   }

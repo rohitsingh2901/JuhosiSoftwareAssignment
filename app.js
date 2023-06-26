@@ -9,10 +9,10 @@ app.use(express.json());
 
 // Create MySQL connection pool
 const pool = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'juhosi software'
+  host: 'sql12.freesqldatabase.com',
+  user: 'sql12628891',
+  password: 'ALg7qF5zle',
+  database: 'sql12628891'
 });
 
 

@@ -22,19 +22,19 @@ document
       document.getElementById("customer1Form").classList.add("hidden");
       document.getElementById("table").classList.remove("hidden");
       
-      fetch('http://127.0.0.1:3000/getquantity')
+      fetch('https://lofty-fallacious-network.glitch.me/getquantity')
       .then(response => response.json())
       .then(data => {
         document.getElementById("q1sum").innerHTML = data[0].sum_of_quantity
       })
       .catch(error => console.log(error));
-      fetch('http://127.0.0.1:3000/getweight')
+      fetch('https://lofty-fallacious-network.glitch.me/getweight')
       .then(response => response.json())
       .then(data => {
         document.getElementById("q1weight").innerHTML = data[0].sum_of_weight.toFixed(2)
       })
       .catch(error => console.log(error));
-      fetch('http://127.0.0.1:3000/getbox')
+      fetch('https://lofty-fallacious-network.glitch.me/getbox')
       .then(response => response.json())
       .then(data => {
         document.getElementById("q1box").innerHTML = data[0].sum_of_box
@@ -42,13 +42,13 @@ document
       .catch(error => console.log(error));
 
 
-      fetch('http://127.0.0.1:3000/getquantity2')
+      fetch('https://lofty-fallacious-network.glitch.me/getquantity2')
       .then(response => response.json())
       .then(data => {
         document.getElementById("q2sum").innerHTML = data[0].sum_of_quantity
       })
       .catch(error => console.log(error));
-      fetch('http://127.0.0.1:3000/getweight2')
+      fetch('https://lofty-fallacious-network.glitch.me/getweight2')
       .then(response => response.json())
       .then(data => {
         if(data[0].sum_of_weight){
@@ -56,7 +56,7 @@ document
         }
       })
       .catch(error => console.log(error));
-      fetch('http://127.0.0.1:3000/getbox2')
+      fetch('https://lofty-fallacious-network.glitch.me/getbox2')
       .then(response => response.json())
       .then(data => {
         document.getElementById("q2box").innerHTML = data[0].sum_of_box
@@ -65,8 +65,8 @@ document
 
 
       Promise.all([
-        fetch('http://127.0.0.1:3000/getquantity'),
-        fetch('http://127.0.0.1:3000/getquantity2')
+        fetch('https://lofty-fallacious-network.glitch.me/getquantity'),
+        fetch('https://lofty-fallacious-network.glitch.me/getquantity2')
       ])
         .then(responses => Promise.all(responses.map(response => response.json())))
         .then(data => {
@@ -78,8 +78,8 @@ document
 
 
       Promise.all([
-        fetch('http://127.0.0.1:3000/getweight'),
-        fetch('http://127.0.0.1:3000/getweight2')
+        fetch('https://lofty-fallacious-network.glitch.me/getweight'),
+        fetch('https://lofty-fallacious-network.glitch.me/getweight2')
       ])
         .then(responses => Promise.all(responses.map(response => response.json())))
         .then(data => {
@@ -90,8 +90,8 @@ document
         .catch(error => console.log(error));
 
       Promise.all([
-        fetch('http://127.0.0.1:3000/getbox'),
-        fetch('http://127.0.0.1:3000/getbox2')
+        fetch('https://lofty-fallacious-network.glitch.me/getbox'),
+        fetch('https://lofty-fallacious-network.glitch.me/getbox2')
       ])
         .then(responses => Promise.all(responses.map(response => response.json())))
         .then(data => {
@@ -117,7 +117,7 @@ document
       };
 
       // Send data to the server using Fetch API
-      fetch("http://127.0.0.1:3000/save_data", {
+      fetch("https://lofty-fallacious-network.glitch.me/save_data", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -247,8 +247,10 @@ document
       id13: id13
     };
 
+    console.log(JSON.stringify(formData))
+
     // Send data to the server using Fetch API
-    fetch("http://127.0.0.1:3000/save_data2", {
+    fetch("https://lofty-fallacious-network.glitch.me/save_data2", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

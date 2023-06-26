@@ -29,19 +29,34 @@ document
       fetch('https://lofty-fallacious-network.glitch.me/getquantity')
       .then(response => response.json())
       .then(data => {
-        document.getElementById("q1sum").innerHTML = data[0].sum_of_quantity
+        if(data[0].sum_of_quantity){
+          document.getElementById("q1sum").innerHTML = data[0].sum_of_quantity
+        }
+        else{
+          document.getElementById("q1sum").innerHTML = 0;
+        }
       })
       .catch(error => console.log(error));
       fetch('https://lofty-fallacious-network.glitch.me/getweight')
       .then(response => response.json())
       .then(data => {
-        document.getElementById("q1weight").innerHTML = data[0].sum_of_weight.toFixed(2)
+        if(data[0].sum_of_weight){
+          document.getElementById("q1weight").innerHTML = data[0].sum_of_weight.toFixed(2)
+        }
+        else{
+          document.getElementById("q1weight").innerHTML = 0;
+        }
       })
       .catch(error => console.log(error));
       fetch('https://lofty-fallacious-network.glitch.me/getbox')
       .then(response => response.json())
       .then(data => {
-        document.getElementById("q1box").innerHTML = data[0].sum_of_box
+        if(data[0].sum_of_box){
+          document.getElementById("q1box").innerHTML = data[0].sum_of_box
+        }
+        else{
+          document.getElementById("q1box").innerHTML = 0;
+        }
       })
       .catch(error => console.log(error));
 
@@ -49,7 +64,12 @@ document
       fetch('https://lofty-fallacious-network.glitch.me/getquantity2')
       .then(response => response.json())
       .then(data => {
-        document.getElementById("q2sum").innerHTML = data[0].sum_of_quantity
+        if( data[0].sum_of_quantity){
+          document.getElementById("q2sum").innerHTML = data[0].sum_of_quantity
+        }
+        else{
+          document.getElementById("q2sum").innerHTML = 0;
+        }
       })
       .catch(error => console.log(error));
       fetch('https://lofty-fallacious-network.glitch.me/getweight2')
@@ -58,12 +78,20 @@ document
         if(data[0].sum_of_weight){
           document.getElementById("q2weight").innerHTML = data[0].sum_of_weight.toFixed(2)
         }
+        else{
+          document.getElementById("q2weight").innerHTML = 0;
+        }
       })
       .catch(error => console.log(error));
       fetch('https://lofty-fallacious-network.glitch.me/getbox2')
       .then(response => response.json())
       .then(data => {
-        document.getElementById("q2box").innerHTML = data[0].sum_of_box
+        if(data[0].sum_of_box){
+          document.getElementById("q2box").innerHTML = data[0].sum_of_box
+        }
+        else{
+          document.getElementById("q2box").innerHTML  = 0;
+        }
       })
       .catch(error => console.log(error));
 
@@ -76,7 +104,12 @@ document
         .then(data => {
           const sumOfQuantities = data.reduce((acc, curr) => acc + curr[0].sum_of_quantity, 0);
           sumOfQuantities;
-          document.getElementById("tqsum").innerHTML = sumOfQuantities;
+          if(sumOfQuantities){
+            document.getElementById("tqsum").innerHTML = sumOfQuantities;
+          }
+          else{
+            document.getElementById("tqsum").innerHTML = 0;
+          }
         })
         .catch(error => console.log(error));
 
@@ -89,7 +122,13 @@ document
         .then(data => {
           const sumOfQuantities = data.reduce((acc, curr) => acc + curr[0].sum_of_weight, 0);
           sumOfQuantities;
-          document.getElementById("twsum").innerHTML = sumOfQuantities.toFixed(2);
+          if(sumOfQuantities){
+            document.getElementById("twsum").innerHTML = sumOfQuantities.toFixed(2);
+          }
+          else{
+            document.getElementById("twsum").innerHTML = 0;
+          }
+          
         })
         .catch(error => console.log(error));
 
@@ -101,7 +140,12 @@ document
         .then(data => {
           const sumOfQuantities = data.reduce((acc, curr) => acc + curr[0].sum_of_box, 0);
           sumOfQuantities;
-          document.getElementById("tbsum").innerHTML = sumOfQuantities;
+          if(sumOfQuantities){
+            document.getElementById("tbsum").innerHTML = sumOfQuantities;
+          }
+          else{
+            document.getElementById("tbsum").innerHTML = 0;
+          }
         })
         .catch(error => console.log(error))
         .finally(()=>{
@@ -143,27 +187,33 @@ document
           if (response.ok) {
             return response.text(); // Parse response body as text
           } else {
-            document.getElementById("alert3").classList.remove("hidden");
-          setTimeout(() => {
-            document.getElementById("alert3").classList.add("hidden");
-          }, 3000);
+            document.getElementById("alert3").classList.remove("d-none");
+      document.getElementById("alert3").classList.add("d-block");
+      setTimeout(() => {
+      document.getElementById("alert3").classList.remove("d-block");
+        document.getElementById("alert3").classList.add("d-none");
+      }, 3000);
             throw new Error("Error: " + response.status);
           }
         })
         .then(function (data) {
           // Handle the server response
-            document.getElementById("alert1").classList.remove("hidden");
-            setTimeout(() => {
-              document.getElementById("alert1").classList.add("hidden");
-            }, 3000);
+          document.getElementById("alert1").classList.remove("d-none");
+          document.getElementById("alert1").classList.add("d-block");
+          setTimeout(() => {
+          document.getElementById("alert1").classList.remove("d-block");
+            document.getElementById("alert1").classList.add("d-none");
+          }, 3000);
           console.log(data);
         })
         .catch(function (error) {
           // Handle network errors or other exceptions
-          document.getElementById("alert3").classList.remove("hidden");
-          setTimeout(() => {
-            document.getElementById("alert3").classList.add("hidden");
-          }, 3000);
+          document.getElementById("alert3").classList.remove("d-none");
+      document.getElementById("alert3").classList.add("d-block");
+      setTimeout(() => {
+      document.getElementById("alert3").classList.remove("d-block");
+        document.getElementById("alert3").classList.add("d-none");
+      }, 3000);
           console.error(error);
         })
         .finally(()=>{
@@ -281,27 +331,33 @@ document
         if (response.ok) {
           return response.text(); // Parse response body as text
         } else {
-          document.getElementById("alert3").classList.remove("hidden");
-          setTimeout(() => {
-            document.getElementById("alert3").classList.add("hidden");
-          }, 3000);
+          document.getElementById("alert3").classList.remove("d-none");
+      document.getElementById("alert3").classList.add("d-block");
+      setTimeout(() => {
+      document.getElementById("alert3").classList.remove("d-block");
+        document.getElementById("alert3").classList.add("d-none");
+      }, 3000);
           throw new Error("Error: " + response.status);
         }
       })
       .then(function (data) {
-        document.getElementById("alert1").classList.remove("hidden");
-        setTimeout(() => {
-            document.getElementById("alert1").classList.add("hidden");
-          }, 3000);
+        document.getElementById("alert1").classList.remove("d-none");
+      document.getElementById("alert1").classList.add("d-block");
+      setTimeout(() => {
+      document.getElementById("alert1").classList.remove("d-block");
+        document.getElementById("alert1").classList.add("d-none");
+      }, 3000);
         // Handle the server response
         console.log(data);
       })
       .catch(function (error) {
         // Handle network errors or other exceptions
-        document.getElementById("alert3").classList.remove("hidden");
-          setTimeout(() => {
-            document.getElementById("alert3").classList.add("hidden");
-          }, 3000);
+        document.getElementById("alert3").classList.remove("d-none");
+      document.getElementById("alert3").classList.add("d-block");
+      setTimeout(() => {
+      document.getElementById("alert3").classList.remove("d-block");
+        document.getElementById("alert3").classList.add("d-none");
+      }, 3000);
         console.error(error);
       })
       .finally(()=>{
@@ -311,8 +367,8 @@ document
   });
 
   window.onload = function() {
-    var currentPage = window.location.pathname;
-    var homePage = "/JuhosiSoftwareAssignment"; // Replace with the location of your home page
+    var currentPage = window.location.href;
+    var homePage = "https://rohitsingh2901.github.io/JuhosiSoftwareAssignment/"; // Replace with the location of your home page
   
     if (currentPage === homePage) {
       document.getElementById("alert5").classList.remove("d-none");

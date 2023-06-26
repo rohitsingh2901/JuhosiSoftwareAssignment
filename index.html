@@ -10,30 +10,60 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
+    <div class="all">
+
+
+
     <div id="alert1" class="alert alert-sucess alert-dismissible fade show hidden" role="alert">
       <strong>Success!</strong> Your credentials are saved into the database
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
+
     <div id="alert2" class="alert alert-sucess alert-dismissible fade show hidden" role="alert">
       <strong>Success!</strong> Fill the above form
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
+    
     <div id="alert3" class="alert alert-danger alert-dismissible fade show hidden" role="alert">
-      <strong>Error!</strong> Some error Occured
+      <strong>Error!</strong> Some error occured
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
+
+    <div id="alert4" class="alert alert-sucess alert-dismissible fade show hidden" role="alert">
+      <strong>Success!</strong> Customer information fetched successfully
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div id="alert5" class="alert alert-sucess alert-dismissible fade show hidden" role="alert">
+      <strong>Hi!</strong> Welcome to Juhosi Software Technologies
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    
+    <div id="spinner" style="display: none; text-align: center; font-size:36px;">
+      <i class="fas fa-spinner fa-spin"></i> Processing...
+    </div>
+    
     <div class="box">
+
       <div class="innerBox">
+
         <div class="card">
+
           <div class="card-body">
             <form id="customer1Form">
               <div class="form-group text-white">
@@ -65,11 +95,14 @@
 
             <form id="customer2Form" class="hidden">
               <div class="form2">
+
               <div class="col-6">
+
               <div class="form-group text-white">
                 <label for="orderdate">Order Date </label><br>
                 <input  required class="form-control custom-color" type="date" id="orderdate" name="orderdate"/>
               </div>
+
               <div class="form-group text-white">
                 <label  for="exampleInput1">Company</label>
                 <input required
@@ -80,6 +113,7 @@
                 />
                 <div id="errorText" class="invalid-feedback">Please enter only alphanumeric characters.</div>
               </div>
+
               <div class="form-group text-white">
                 <label  for="exampleInput2">Owner</label>
                 <input required
@@ -131,6 +165,8 @@
                 <div id="errorText6" class="invalid-feedback">Please enter only integer.</div>
               </div>
             </div>
+
+
             <div class="col-6">
               <div class="form-group text-white">
                 <label  for="exampleInput7">Tracking ID</label>
@@ -182,10 +218,11 @@
                 />
                 <div id="errorText11" class="invalid-feedback">Please enter only integer.</div>
               </div>
+
               <button type="submit" class="btn btn-primary">Submit</button>
               <button onclick="goToHomePage(event)" class="btn btn-primary">Home</button>
             </div>
-          </div>
+              </div>
             </form>
 
 
@@ -234,12 +271,18 @@
 
 
 
-
-
           </div>
+
+
         </div>
+
+
       </div>
+
     </div>
+
+
+  </div>
   </body>
   <script
     src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"

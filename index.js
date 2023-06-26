@@ -10,18 +10,22 @@ document
       (document.getElementById("exampleInputEmail1").value == "customer2" &&
         document.getElementById("exampleInputPassword1").value == "customer2")
     ) {
-      document.getElementById("alert2").classList.remove("hidden");
+      document.getElementById("alert2").classList.remove("d-none");
+      document.getElementById("alert2").classList.add("d-block");
       setTimeout(() => {
-        document.getElementById("alert2").classList.add("hidden");
+      document.getElementById("alert2").classList.remove("d-block");
+        document.getElementById("alert2").classList.add("d-none");
       }, 3000);
       document.getElementById("customer1Form").classList.add("hidden");
       document.getElementById("customer2Form").classList.remove("hidden");
     }
     else if(document.getElementById("exampleInputEmail1").value == "admin" &&
-    document.getElementById("exampleInputPassword1").value =="admin"){
+    document.getElementById("exampleInputPassword1").value =="admin")
+    {
       document.getElementById("customer1Form").classList.add("hidden");
       document.getElementById("table").classList.remove("hidden");
       
+      document.getElementById('spinner').style.display = 'block';
       fetch('https://lofty-fallacious-network.glitch.me/getquantity')
       .then(response => response.json())
       .then(data => {
@@ -99,7 +103,16 @@ document
           sumOfQuantities;
           document.getElementById("tbsum").innerHTML = sumOfQuantities;
         })
-        .catch(error => console.log(error));
+        .catch(error => console.log(error))
+        .finally(()=>{
+          document.getElementById('spinner').style.display = 'none';
+          document.getElementById("alert4").classList.remove("d-none");
+      document.getElementById("alert4").classList.add("d-block");
+      setTimeout(() => {
+      document.getElementById("alert4").classList.remove("d-block");
+        document.getElementById("alert4").classList.add("d-none");
+      }, 3000);
+        });
     }
     
 
@@ -115,6 +128,8 @@ document
         id: id,
         password: password,
       };
+
+  document.getElementById('spinner').style.display = 'block';
 
       // Send data to the server using Fetch API
       fetch("https://lofty-fallacious-network.glitch.me/save_data", {
@@ -150,6 +165,9 @@ document
             document.getElementById("alert3").classList.add("hidden");
           }, 3000);
           console.error(error);
+        })
+        .finally(()=>{
+          document.getElementById('spinner').style.display = 'none';
         });
     }
   });
@@ -249,6 +267,8 @@ document
 
     console.log(JSON.stringify(formData))
 
+  document.getElementById('spinner').style.display = 'block';
+
     // Send data to the server using Fetch API
     fetch("https://lofty-fallacious-network.glitch.me/save_data2", {
       method: "POST",
@@ -283,10 +303,27 @@ document
             document.getElementById("alert3").classList.add("hidden");
           }, 3000);
         console.error(error);
+      })
+      .finally(()=>{
+        document.getElementById('spinner').style.display = 'none';
       });
     }
   });
 
+  window.onload = function() {
+    var currentPage = window.location.pathname;
+    var homePage = "/JuhosiSoftwareAssignment"; // Replace with the location of your home page
+  
+    if (currentPage === homePage) {
+      document.getElementById("alert5").classList.remove("d-none");
+      document.getElementById("alert5").classList.add("d-block");
+      setTimeout(() => {
+      document.getElementById("alert5").classList.remove("d-block");
+        document.getElementById("alert5").classList.add("d-none");
+      }, 3000);
+    }
+  };
+  
 
   function goToHomePage(event) {
     event.preventDefault(); // Prevents the default form submission

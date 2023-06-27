@@ -62,8 +62,8 @@ This project is developed for Juhosi Software Technologies Private Limited.
 
 ## Preview
 ![Juhosi Software - Google Chrome 6_27_2023 11_05_34 PM](https://github.com/rohitsingh2901/JuhosiSoftwareAssignment/assets/80673974/ee2eb18e-d9b3-42c5-b8c0-16a8e872b588)
-![Juhosi Software - Google Chrome 6_27_2023 11_08_16 PM](https://github.com/rohitsingh2901/JuhosiSoftwareAssignment/assets/80673974/54284c44-2d0a-4fc7-893a-a28192ad79cb)
 ![Juhosi Software - Google Chrom![Juhosi Software - Google Chrome 6_27_2023 11_08_16 PM](https://github.com/rohitsingh2901/JuhosiSoftwareAssignment/assets/80673974/a6eeeeaa-3211-4b77-8f54-8cf4a3caafc6)
+![Juhosi Software - Google Chrome 6_27_2023 11_08_16 PM](https://github.com/rohitsingh2901/JuhosiSoftwareAssignment/assets/80673974/54284c44-2d0a-4fc7-893a-a28192ad79cb)
 e 6_27_2023 11_05_58 PM](https://github.com/rohitsingh2901/JuhosiSoftwareAssignment/assets/80673974/a4469417-dd45-4ed1-b149-cb7bb8c9df49)
 ![Juhosi Software - Google Chrome 6_27_2023 11_08_42 PM](https://github.com/rohitsingh2901/JuhosiSoftwareAssignment/assets/80673974/1889511d-c0e9-43ff-a985-a54da244623e)
 ![Juhosi Software - Google Chrome 6_27_2023 11_08_51 PM](https://github.com/rohitsingh2901/JuhosiSoftwareAssignment/assets/80673974/d2e1c94a-88f5-4425-aa44-7908d83d2a35)

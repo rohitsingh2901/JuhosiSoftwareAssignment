@@ -1,3 +1,7 @@
+![Juhosi Software - Google Chrome 6_27_2023 11_09_06 PM](https://github.com/rohitsingh2901/JuhosiSoftwareAssignment/assets/80673974/71e056ac-05cd-47f0-9391-1205555330c1)
+![Juhosi Software - Google Chrome 6_27_2023 11_08_51 PM](https://github.com/rohitsingh2901/JuhosiSoftwareAssignment/assets/80673974/b6c83e19-55a1-4b19-8197-133b972f246b)
+![Juhosi Software - Google Chrome 6_27_2023 11_08_42 PM](https://github.com/rohitsingh2901/JuhosiSoftwareAssignment/assets/80673974/d7e04dea-ade3-476b-b5d5-d32841283b74)
+![Juhosi Software - Google Chrome 6_27_2023 11_08_16 PM](https://github.com/rohitsingh2901/JuhosiSoftwareAssignment/assets/80673974/fecc4a7d-bad9-4b8d-bb51-81e0e45b1083)
 # Login System with Customer Details and Admin View
 
 This project is a login system that allows customers and an admin to access different functionalities based on their credentials. The system is built using HTML, CSS, JavaScript, MySQL, and Express.js.
@@ -61,13 +65,9 @@ To access the project(Github Page), follow these steps:
 This project is developed for Juhosi Software Technologies Private Limited.
 
 ## Preview
-![Juhosi Software - Google Chrome 6_27_2023 11_05_34 PM](https://github.com/rohitsingh2901/JuhosiSoftwareAssignment/assets/80673974/ee2eb18e-d9b3-42c5-b8c0-16a8e872b588)
-![Juhosi Software - Google Chrom![Juhosi Software - Google Chrome 6_27_2023 11_08_16 PM](https://github.com/rohitsingh2901/JuhosiSoftwareAssignment/assets/80673974/a6eeeeaa-3211-4b77-8f54-8cf4a3caafc6)
-![Juhosi Software - Google Chrome 6_27_2023 11_08_16 PM](https://github.com/rohitsingh2901/JuhosiSoftwareAssignment/assets/80673974/54284c44-2d0a-4fc7-893a-a28192ad79cb)
-e 6_27_2023 11_05_58 PM](https://github.com/rohitsingh2901/JuhosiSoftwareAssignment/assets/80673974/a4469417-dd45-4ed1-b149-cb7bb8c9df49)
-![Juhosi Software - Google Chrome 6_27_2023 11_08_42 PM](https://github.com/rohitsingh2901/JuhosiSoftwareAssignment/assets/80673974/1889511d-c0e9-43ff-a985-a54da244623e)
-![Juhosi Software - Google Chrome 6_27_2023 11_08_51 PM](https://github.com/rohitsingh2901/JuhosiSoftwareAssignment/assets/80673974/d2e1c94a-88f5-4425-aa44-7908d83d2a35)
-![Juhosi Software - Google Chrome 6_27_2023 11_09_06 PM](https://github.com/rohitsingh2901/JuhosiSoftwareAssignment/assets/80673974/4be9d61b-693a-47d6-b763-aa34486f2a3f)
+![Uploading Juhosi Software - Google Chrome 6_27_2023 11_05_58 PM.png…]()
+![Uploading Juhosi Software - Google Chrome 6_27_2023 11_05_34 PM.png…]()
+
 
 
 ## Author
